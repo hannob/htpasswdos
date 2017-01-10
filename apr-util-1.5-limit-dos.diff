@@ -1,0 +1,23 @@
+--- a/crypto/crypt_blowfish.c	2012-07-06 13:41:24.000000000 +0200
++++ apr-util-1.5.4/crypto/crypt_blowfish.c	2017-01-10 12:05:56.449895464 +0100
+@@ -675,9 +675,9 @@
+ 	    setting[2] < 'a' || setting[2] > 'z' ||
+ 	    !flags_by_subtype[(unsigned int)(unsigned char)setting[2] - 'a'] ||
+ 	    setting[3] != '$' ||
+-	    setting[4] < '0' || setting[4] > '3' ||
++	    setting[4] < '0' || setting[4] > '1' ||
+ 	    setting[5] < '0' || setting[5] > '9' ||
+-	    (setting[4] == '3' && setting[5] > '1') ||
++	    (setting[4] == '1' && setting[5] > '7') ||
+ 	    setting[6] != '$') {
+ 		__set_errno(EINVAL);
+ 		return NULL;
+@@ -877,7 +877,7 @@
+ 	const char *input, int size, char *output, int output_size)
+ {
+ 	if (size < 16 || output_size < 7 + 22 + 1 ||
+-	    (count && (count < 4 || count > 31)) ||
++	    (count && (count < 4 || count > 17)) ||
+ 	    prefix[0] != '$' || prefix[1] != '2' ||
+ 	    (prefix[2] != 'a' && prefix[2] != 'y')) {
+ 		if (output_size > 0) output[0] = '\0';

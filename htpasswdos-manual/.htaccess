@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "xyz"
+AuthUserFile [put in full path]/pass
+require valid-user
