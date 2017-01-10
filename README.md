@@ -4,13 +4,13 @@ htpasswdos
 In this repository you'll find examples to cause a denial of service
 via htpasswd files in Apache httpd.
 
-In the [subdirectory plain](plain/) you can find a simple .htaccess
+In the [subdirectory htpasswdos-manual](htpasswdos-manual/) you can find a simple .htaccess
 and password file. Uploading that to a webserver with htaccess and
 authentication enabled and trying to log into it with the username
 guest and any password will cause several hours of ressource exhaustion
 on the server. The file path in the file "pass" needs to be adapted.
 
-In the [subdirectory easy-php](easy-php/) you'll find a php script
+In the [subdirectory htpasswdos-php](htpasswdos-php/) you'll find a php script
 that will do all that automatically. It'll create a suitable .htaccess
 and password file in a subdirectory and will then call it multiple
 times via iframes.
