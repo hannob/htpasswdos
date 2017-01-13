@@ -1,3 +1,8 @@
+background
+==========
+
+[htpasswDoS: Local Denial of Service via Apache httpd password hashes](https://blog.fuzzing-project.org/56-htpasswDoS-Local-Denial-of-Service-via-Apache-httpd-password-hashes.html)
+
 htpasswdos
 ==========
 
