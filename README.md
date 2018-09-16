@@ -21,4 +21,5 @@ and password file in a subdirectory and will then call it multiple
 times via iframes.
 
 If you want to protect against this kind of attack you can apply
-[this patch](apr-util-1.5-limit-dos.patch) against apr-util.
+[this patch](apr-util-1.5-limit-dos.diff) against apr-util. This was applied
+upstream in [apr-util 1.6.0](https://archive.apache.org/dist/apr/CHANGES-APR-UTIL-1.6).
